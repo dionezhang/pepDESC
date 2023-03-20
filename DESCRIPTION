@@ -1,0 +1,19 @@
+Package: pepDESC
+Title: What the Package Does (One Line, Title Case)
+Version: 1.0.0
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: renv, roxygen2
+Imports: MASS, progress, stats
+Depends: R (>= 2.10)
+LazyData: true
+NeedsCompilation: no
+Packaged: 2023-03-20 05:36:02 UTC; Dione
+Author: First Last [aut, cre] (YOUR-ORCID-ID)
+Maintainer: First Last <first.last@example.com>
