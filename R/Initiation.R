@@ -1,5 +1,5 @@
-#' Title Initialization
-#' This function initialize the input data to enable downstream analysis
+#' @title Initialization
+#' @document This function initialize the input data to enable downstream analysis
 #' @param data
 #' a .Rdata file read from the peptide-level searching result
 #' should contain columns "Accession" "Description" "Sequence" "Modifications"

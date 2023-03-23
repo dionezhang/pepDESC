@@ -1,5 +1,5 @@
-#' Title Normalization
-#' This optinal functions performs median normalization among samples
+#' @title Normalization
+#' @document This optinal functions performs median normalization among samples
 #'
 #' @param Peptide Quantitative peptide without untrusted data and contaminant data, and without outlier samples
 #' @param method "Median" or "Mean", indicating to normalize by median value or mean value.

@@ -1,5 +1,5 @@
-#' Title FilterSample
-#' This function removes outlier samples according to the identification and total abundance.
+#' @title FilterSample
+#' @document This function removes outlier samples according to the identification and total abundance.
 #' @param Peptide Quantitative peptide processed without untrusted data or contaminant data
 #'
 #' @return A data list of peptide information without outlier samples

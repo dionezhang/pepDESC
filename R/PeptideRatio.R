@@ -1,5 +1,5 @@
-#' Title PeptideRatio
-#' This function calculates pairwise ratio of peptides between two subpopulations
+#' @title PeptideRatio
+#' @document This function calculates pairwise ratio of peptides between two subpopulations
 #'
 #' @param Peptide Quantitative peptide information without untrusted data and contaminant data, and without outlier samples
 #' @param numerator the type of cells that play the numerator when calculating the peptide ratio
