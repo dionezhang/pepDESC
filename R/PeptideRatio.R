@@ -1,5 +1,5 @@
-#' @title PeptideRatio
-#' @document This function calculates pairwise ratio of peptides between two subpopulations
+#' Title PeptideRatio
+#' This function calculates pairwise ratio of peptides between two subpopulations
 #'
 #' @param Peptide Quantitative peptide information without untrusted data and contaminant data, and without outlier samples
 #' @param numerator the type of cells that play the numerator when calculating the peptide ratio
@@ -23,10 +23,10 @@ PeptideRatio<-function (Peptide, numerator = Peptide$type[1])
       R <- c()
       for (i in seq_len(length(x))) {
         if (x[i] == 0) {
-          R <- c(R, sapply(y, function(a) if (a == 0) (-1) else (x[i]/a)))
+          R <- c(R, vapply(y, function(a) if (a == 0) (-1) else (x[i]/a), c(1)))
         }
         else {
-          R <- c(R, sapply(y, function(a) if (a == 0) (Inf) else (x[i]/a)))
+          R <- c(R, vapply(y, function(a) if (a == 0) (Inf) else (x[i]/a), c(1)))
         }
       }
       R[R == Inf] <- max(stats::na.omit(as.numeric(unlist(R[R !=
@@ -44,7 +44,7 @@ PeptideRatio<-function (Peptide, numerator = Peptide$type[1])
   Ratio[Ratio > 2] <- 2
   CalculateP <- function(x, y) {
     if (max(length(x), length(y)) == 3) {
-      return(stats::t.test(x, y, var.equal = F, warning = F)$p.value)
+      return(stats::t.test(x, y, var.equal = FALSE, warning = FALSE)$p.value)
     }
     else {
       options(warn = -1)

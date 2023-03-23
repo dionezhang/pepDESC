@@ -1,5 +1,5 @@
-#' @title ScoreProtein
-#' @document This function calculates the protein DE-scores based on peptide DE-scores and peptide abundances
+#' Title ScoreProtein
+#' This function calculates the protein DE-scores based on peptide DE-scores and peptide abundances
 #'
 #' @param pvalcutoff Maximum p-value for hypothesis test for differential expressed peptides.
 #' @param Peptide Quantitative peptide information with a table of peptide DE-scores

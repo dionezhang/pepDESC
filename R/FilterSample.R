@@ -1,5 +1,5 @@
-#' @title FilterSample
-#' @document This function removes outlier samples according to the identification and total abundance.
+#' Title FilterSample
+#' This function removes outlier samples according to the identification and total abundance.
 #' @param Peptide Quantitative peptide processed without untrusted data or contaminant data
 #'
 #' @return A data list of peptide information without outlier samples
@@ -28,9 +28,9 @@ FilterSample<-function (Peptide)
   print(paste("removed sample =", as.character(rmSample),
               sep = "\r"))
   Peptide$type <- Peptide$type[colnames(Peptide$Abu) %in%
-                                 rmSample == F]
+                                 rmSample == FALSE]
   Peptide$Abu <- Peptide$Abu[, colnames(Peptide$Abu) %in%
-                               rmSample == F]
+                               rmSample == FALSE]
   return(Peptide)
 }
 
