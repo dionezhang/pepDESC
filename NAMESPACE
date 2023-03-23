@@ -1,1 +1,8 @@
-exportPattern("^[[:alpha:]]+")
+
+export(FilterData)
+export(FilterSample)
+export(Initiation)
+export(Normalization)
+export(PeptideRatio)
+export(ScoreProtein)
+importFrom('stats',median)
