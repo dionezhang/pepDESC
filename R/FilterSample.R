@@ -21,9 +21,9 @@ FilterSample<-function (Peptide)
   fit_sum <- MASS::fitdistr(sum, "normal")
   fit_count <- MASS::fitdistr(count, "normal")
   rmSample <- names(count[count < (fit_count$estimate[1] -
-                                     2 * fit_count$estimate[2])])
+                                     3 * fit_count$estimate[2])])
   rmSample <- c(rmSample, names(sum[sum < (fit_sum$estimate[1] -
-                                             2 * fit_sum$estimate[2])]))
+                                             3 * fit_sum$estimate[2])]))
   rmSample <- unique(rmSample)
   print(paste("removed sample =", as.character(rmSample),
               sep = "\r"))
