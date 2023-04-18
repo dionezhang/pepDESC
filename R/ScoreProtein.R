@@ -47,7 +47,7 @@ ScoreProtein<-function (Peptide, pvalcutoff = 0.05)
     score <- pep$Ratio * pep$weight
     result <- c(result, sum(score))
   }
-  result <- data.frame(row.names = Protein, result = result)
+  result <- data.frame(row.names = Protein, score = result)
   return(result)
 }
 
