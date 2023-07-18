@@ -1,6 +1,6 @@
 # pepDESC
 
-pepDESC is a useful tool for differential expression analysis of single-cell MS-based proteomics data. 
+pepDESC is a useful tool for differential expression analysis of single-cell MS-based proteomics data.
 
 ## Features
 
@@ -8,13 +8,14 @@ pepDESC is a useful tool for differential expression analysis of single-cell MS-
 * pepDESC tolerates data with large fraction of missing values without data imputation.
 * pepDESC filtered out contaminants peptides. It also has the ability to identify falsely-match contaminant peptides and removed them if the average retention time and m/z of peptides were provided.
 * pepDESC deciding the differentially expressed proteins by scoring each protein.
+* To learn more about pepDESC, please refer to the published article [pepDESC: A Method for the Detection of Differentially Expressed Proteins for Mass Spectrometry-Based Single-Cell Proteomics Using Peptide-level Information](https://www.sciencedirect.com/science/article/pii/S1535947623000944)
 
 ## Installation
 
-To install the pepDESC package, start R (version 4.0) and enter:
+To install the pepDESC package, start R (version 4.0 or higher) and enter:
 
 ```R
-devtools::install_github('pepDESC')
+devtools::install_github('dionezhang/pepDESC')
 ```
 
 ## Prepare your data
@@ -43,7 +44,7 @@ An example of the prepared data frame would be like the *test_raw.rda* in the *d
 To run a general pepDESC analysis of the test data, start R (version 4.0) and enter:
 
 ```R
-load(pepDESC)
+library(pepDESC)
 
 # This function make your data frame ready for analysis
 Peptide<-Initiation(test_raw)
